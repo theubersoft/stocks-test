@@ -74,7 +74,9 @@ class Table extends PureComponent {
     const { addToList } = this.props
     const { selectValue } = this.state
     
-    addToList(selectValue.value)
+    if (selectValue) {
+      addToList(selectValue.value)
+    }
   }
 
   calcPrice(key) {
