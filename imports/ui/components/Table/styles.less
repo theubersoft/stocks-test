@@ -1,0 +1,53 @@
+.Table {  
+  &__cont {
+    margin-top: 2rem; 
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    max-width: 16rem;
+    margin: .5rem auto 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &_select {
+      margin-bottom: 2rem;
+      border-bottom: none;
+    }
+  }
+
+  &__price,
+  &__name {
+    box-sizing: border-box;
+    padding: .2rem .6rem;
+  }
+
+  &__price {
+    width: 4rem;
+  }
+
+  &__name {
+    width: 10rem;
+
+    &_select {
+      padding: 0;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    outline: none !important;
+    cursor: pointer;
+
+    &_remove {
+      transform: rotate(45deg) scale(1.1);
+      color: rgb(255, 124, 124);
+
+      &:hover {
+        color: rgb(254, 10, 10);
+      }
+    }
+  }
+}
