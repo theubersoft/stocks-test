@@ -49,7 +49,7 @@ class Table extends PureComponent {
   }
 
   updatePrices() {
-    const { prices, filter: { price, currency, list } } = this.props
+    const { prices, filter: { list } } = this.props
     const keys = Object.keys(prices)
 
     const selectPrices = [...keys.filter(key => !list.includes(key)).map(key => ({
@@ -90,7 +90,7 @@ class Table extends PureComponent {
 
     return {
       name: key,
-      price: value.toFixed(2),
+      price: isNaN(value) ? 0 : value.toFixed(2),
     }
   }
 
